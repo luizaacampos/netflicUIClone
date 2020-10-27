@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-left">
+                <a href=""><img src="images/logo_netflix.png" alt=""></a>
+           
+            <div class="menu">
+                <ul>
+                    <li><a href="">Início</a></li>
+                    <li><a href="">Séries</a></li>
+                    <li><a href="">Filmes</a></li>
+                    <li><a href="">Mais recentes</a></li>
+                    <li><a href="">Minha lista</a></li>
+                </ul>
+            </div><!--menu-->
+        </div><!--header-left-->
+
+        <div class="header-right">
+            <div class="search">
+                <i class="fas fa-search"></i>
+            </div><!--search-->
+            <a href="">Infantil</a>
+            <i class="fas fa-gift"></i>
+            <div class="notifications">
+                <div class="circle-notification">
+                    <span>6</span>
+                </div><!--circle-notification-->
+                <i class="fas fa-bell"></i>
+            </div><!--notifications-->
+    </div><!--header-right-->
+
+            <div class="clear"></div>
+        </div><!--container-->
+    </header>
+
+    <section class="destaque">
+        <div class="overlay"></div><!--overlay-->
+        <div class="txt-destaque">
+            <h2>Peaky Blinders</h2>
+            <h3>Sangue, Apostas e Navalhas</h3>
+            <p>Assista a primeira temporada</p>
+            <br>
+            <a href=""><i class="fas fa-play"></i>Assistir</a>
+            <a href=""><i class="fas fa-info-circle"></i>Mais informações</a>
+            
+        </div><!--txt-destaque-->
+    </section><!--destaque-->
+
+    <section class="vitrine">
+        <div class="vitrine-flex">
+            <div class="vitrine-single-banner">
+                <div style="background-image: url(images/suits.jpeg);" class="vitrine-wraper"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div style="background-image: url(images/arrow.jpg);" class="vitrine-wraper"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div style="background-image: url(images/suits.jpeg);" class="vitrine-wraper"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div style="background-image: url(images/arrow.jpg);" class="vitrine-wraper"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div style="background-image: url(images/suits.jpeg);" class="vitrine-wraper"></div>
+            </div>
+            <div class="vitrine-single-banner">
+                <div style="background-image: url(images/arrow.jpg);" class="vitrine-wraper"></div>
+            </div>
+        </div><!--vitrine-flex-->
+    </section><!--vitrine-->
+    
+
+<script src="jquery.js"></script>
+<script src="slick.min.js"></script>
+<script>
+    $('.vitrine-flex').slick({
+        dots: false,
+        arrows: false,
+        infinite: false,
+        centerMode: false,
+        speed: 1000,
+        slidesToShow: 6,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        pauseOnHover: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 3
+                }
+                
+            }]
+    })
+
+    $('.vitrine-wraper').hover(function(){
+        $(this).css('z-index','1000')
+    })
+    $('.vitrine-wraper').mouseout(function(){
+        $(this).css('z-index','0')
+    })
+</script>
+</body>
+</html>
